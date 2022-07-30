@@ -8,7 +8,7 @@ Testing Purpose  Api , Started on 30 July.
 - run `composer install` in project root directory
 - run `php artisan migrate` for database migration
 - run `php artisan db:seed` for database seeding
-- run `php artisan serve`
+- run `php -S localhost:8000 -t public`
 - open `http://127.0.0.1:8000/login` and login using credential ( Pls find email from users table and password is password).
 
 
@@ -20,7 +20,7 @@ curl -sS <https://getcomposer.org/installer> | sudo php -- --install-dir=/usr/bi
 
 - `php artisan migrate:fresh`
 - `php artisan db:seed`
-- `php artisan serve`
+- `php -S localhost:8000 -t public`
 
 
 
