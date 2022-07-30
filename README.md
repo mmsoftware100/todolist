@@ -1,24 +1,46 @@
-# Lumen PHP Framework
+## Todo List api with Lumen for testing purpose.
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+Testing Purpose  Api , Started on 30 July.
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+### Setup Guide
 
-## Official Documentation
+- clone this repo
+- run `composer install` in project root directory
+- run `php artisan migrate` for database migration
+- run `php artisan db:seed` for database seeding
+- run `php artisan serve`
+- open `http://127.0.0.1:8000/login` and login using following credential.
 
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
 
-## Contributing
+### Install Composer
 
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+curl -sS <https://getcomposer.org/installer> | sudo php -- --install-dir=/usr/bin --filename=composer
 
-## Security Vulnerabilities
+### Setup command sheet
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- `php artisan migrate:fresh`
+- `php artisan db:seed`
+- `php artisan serve`
 
-## License
 
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+### Dev Guide
+
+- Nothing to do
+
+### Contributors
+
+- **[Hein Aung Htet](https://github.com/Heinaunghtet/)**
+- **[Aung Ko Man](https://github.com/Aungkoman)**
+
+
+### License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+Now you can use postman collection to test API.
+
+**[Postman Documentation for Todo List](https://documenter.getpostman.com/view/11673177/UzdwWnHW)**
+
+
