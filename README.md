@@ -9,7 +9,7 @@ Testing Purpose  Api , Started on 30 July.
 - run `php artisan migrate` for database migration
 - run `php artisan db:seed` for database seeding
 - run `php artisan serve`
-- open `http://127.0.0.1:8000/login` and login using following credential.
+- open `http://127.0.0.1:8000/login` and login using credential ( Pls find email from users table and password is password).
 
 
 ### Install Composer
