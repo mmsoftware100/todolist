@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('user_id');
             $table->longText('description');
             $table->boolean('status');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

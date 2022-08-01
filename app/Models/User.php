@@ -37,5 +37,11 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
         return $this->hasMany(TodoList::class);
     }
 
+    public function todotrashed()
+    {
+        return $this->hasMany(TodoList::class)->onlyTrashed();
+    }
+
+
 
 }

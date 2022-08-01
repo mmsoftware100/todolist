@@ -24,4 +24,5 @@ $router->group(['prefix' => 'api/'], function ($router) {
     $router->get('todo/{id}/', 'TodoListController@show');
     $router->put('todo/{id}/', 'TodoListController@update');
     $router->delete('todo/{id}/', 'TodoListController@destroy');
+    $router->post('todo/sync', 'TodoListController@sync');
 });
