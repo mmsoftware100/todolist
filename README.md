@@ -22,7 +22,9 @@ curl -sS <https://getcomposer.org/installer> | sudo php -- --install-dir=/usr/bi
 - `php artisan db:seed`
 - `php -S localhost:8000 -t public`
 
-
+### Setup time zone
+- `change APP_TIMEZONE=UTC to APP_TIMEZONE=Asia/Yangon in .env`
+- `php artisan optimize`
 
 ### Dev Guide
 
