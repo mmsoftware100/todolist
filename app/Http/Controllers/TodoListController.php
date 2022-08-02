@@ -119,7 +119,9 @@ class TodoListController extends Controller
         // return response()->json(['status' => 'success', 'result' => $deleted_data]);
         // exit;
        
-       
+        $modified_data = Auth::user()->todo()->where('updated_at', '>', $last_sync_time)->get();
+        // return response()->json(['status' => 'success', 'result' => $modified_data]);
+        // exit;
 
         $local_modified_data = $local_data['modified_data'];
         // dd($local_modified_data);
@@ -128,7 +130,7 @@ class TodoListController extends Controller
                 // dd($value);
                 $todo = TodoList::where('id', $value['sync_id'])->first();
                 // dd((string)$todo->updated_at);
-                if((string)$todo->updated_at < $last_sync_time){
+                if((string)$todo->updated_at < $value['modified_at']){
                     $todo->description =  $value['description'];
                     $todo->status =  $value['status'];
                     $todo->save();
@@ -138,9 +140,7 @@ class TodoListController extends Controller
             }
         }
 
-        $modified_data = Auth::user()->todo()->where('updated_at', '>', $last_sync_time)->get();
-        // return response()->json(['status' => 'success', 'result' => $modified_data]);
-        // exit;
+        
 
         $local_created_data = $local_data['created_data'];
         // dd($local_created_data);
